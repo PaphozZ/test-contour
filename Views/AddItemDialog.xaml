@@ -1,0 +1,83 @@
+﻿<Window x:Class="XsltEmployeeWpf.Views.AddItemDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:XsltEmployeeWpf.ViewModels"
+        Title="Добавить запись"
+        Height="220"
+        Width="300"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Window.DataContext>
+        <local:AddItemViewModel />
+    </Window.DataContext>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Фамилия:"
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,5" />
+        <TextBox Grid.Row="0"
+                 Grid.Column="1"
+                 Text="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"
+                 Margin="0,0,0,5" />
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="Имя:"
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,5" />
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                 Margin="0,0,0,5" />
+
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Text="Месяц:"
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,5" />
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Text="{Binding Month, UpdateSourceTrigger=PropertyChanged}"
+                 Margin="0,0,0,5" />
+
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Text="Сумма:"
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,5" />
+        <TextBox Grid.Row="3"
+                 Grid.Column="1"
+                 Text="{Binding Amount, UpdateSourceTrigger=PropertyChanged}"
+                 Margin="0,0,0,5" />
+
+        <StackPanel Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,10,0,0">
+            <Button Content="OK"
+                    IsDefault="True"
+                    Width="75"
+                    Margin="0,0,10,0"
+                    Click="OkButton_Click" />
+            <Button Content="Отмена"
+                    IsCancel="True"
+                    Width="75" />
+        </StackPanel>
+    </Grid>
+</Window>

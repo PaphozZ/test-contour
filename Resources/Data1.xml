@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Pay total="25215.40">
+  <item mount="march" amount="1001.1" surname="Ivanova" name="Lena" />
+  <item mount="january" amount="2001" surname="Ivanova" name="Lena" />
+  <item mount="february" amount="3001,10" surname="Ivanova" name="Lena" />
+  <item mount="march" amount="1000" surname="Ivanova" name="Masha" />
+  <item mount="january" amount="2000.0" surname="Ivanova" name="Masha" />
+  <item mount="february" amount="3000" surname="Ivanova" name="Masha" />
+  <item mount="Yan" amount="12000" surname="Fam" name="Nam" />
+  <item mount="yan" amount="200.20" surname="fam" name="nam" />
+  <item mount="12" amount="12" surname="fam" name="nam" />
+  <item mount="13" amount="1000" surname="fam" name="nam" />
+</Pay>
